@@ -109,6 +109,84 @@
           }
         }
       }
+    },
+    "paywall-previews": {
+      "root": "libs/paywall-previews",
+      "sourceRoot": "libs/paywall-previews/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/paywall-previews/.eslintrc",
+            "tsConfig": [
+              "libs/paywall-previews/tsconfig.lib.json",
+              "libs/paywall-previews/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/paywall-previews/**"]
+          }
+        },
+        "build": {
+          "builder": "@nrwl/web:package",
+          "options": {
+            "outputPath": "dist/libs/paywall-previews",
+            "tsConfig": "libs/paywall-previews/tsconfig.lib.json",
+            "project": "libs/paywall-previews/package.json",
+            "entryFile": "libs/paywall-previews/src/index.ts",
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/paywall-previews/jest.config.js",
+            "tsConfig": "libs/paywall-previews/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "inplayer-ui": {
+      "root": "libs/inplayer-ui",
+      "sourceRoot": "libs/inplayer-ui/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/inplayer-ui/.eslintrc",
+            "tsConfig": [
+              "libs/inplayer-ui/tsconfig.lib.json",
+              "libs/inplayer-ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/inplayer-ui/**"]
+          }
+        },
+        "build": {
+          "builder": "@nrwl/web:package",
+          "options": {
+            "outputPath": "dist/libs/inplayer-ui",
+            "tsConfig": "libs/inplayer-ui/tsconfig.lib.json",
+            "project": "libs/inplayer-ui/package.json",
+            "entryFile": "libs/inplayer-ui/src/index.ts",
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/inplayer-ui/jest.config.js",
+            "tsConfig": "libs/inplayer-ui/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

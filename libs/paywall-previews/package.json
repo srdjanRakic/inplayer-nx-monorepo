@@ -1,0 +1,8 @@
+{
+  "name": "@inplayer-org/paywall-previews",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}

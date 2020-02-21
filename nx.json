@@ -1,5 +1,5 @@
 {
-  "npmScope": "inplayer-ui-components",
+  "npmScope": "@inplayer-org",
   "implicitDependencies": {
     "workspace.json": "*",
     "package.json": {
@@ -17,6 +17,12 @@
     "styleguide-e2e": {
       "tags": [],
       "implicitDependencies": ["styleguide"]
+    },
+    "paywall-previews": {
+      "tags": []
+    },
+    "inplayer-ui": {
+      "tags": []
     }
   }
 }

@@ -15,7 +15,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@inplayer-org/ui/paywall-previews": [
+        "libs/paywall-previews/src/index.ts"
+      ],
+      "@inplayer-org/ui/inplayer-ui": ["libs/inplayer-ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
