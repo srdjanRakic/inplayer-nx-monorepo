@@ -1,0 +1,22 @@
+{
+  "npmScope": "inplayer-ui-components",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "styleguide": {
+      "tags": []
+    },
+    "styleguide-e2e": {
+      "tags": [],
+      "implicitDependencies": ["styleguide"]
+    }
+  }
+}
